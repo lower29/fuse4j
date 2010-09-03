@@ -336,19 +336,19 @@ jclass_fuse_FuseStatfs *alloc_jclass_fuse_FuseStatfs(JNIEnv *env)
       if ((*env)->ExceptionCheck(env)) break;
 
       // obtain instance field IDs
-      fuse_FuseStatfs->field.blockSize = (*env)->GetFieldID(env, fuse_FuseStatfs->class, "blockSize", "I");
+      fuse_FuseStatfs->field.blockSize = (*env)->GetFieldID(env, fuse_FuseStatfs->class, "blockSize", "J");
       if ((*env)->ExceptionCheck(env)) break;
-      fuse_FuseStatfs->field.blocks = (*env)->GetFieldID(env, fuse_FuseStatfs->class, "blocks", "I");
+      fuse_FuseStatfs->field.blocks = (*env)->GetFieldID(env, fuse_FuseStatfs->class, "blocks", "J");
       if ((*env)->ExceptionCheck(env)) break;
-      fuse_FuseStatfs->field.blocksAvail = (*env)->GetFieldID(env, fuse_FuseStatfs->class, "blocksAvail", "I");
+      fuse_FuseStatfs->field.blocksAvail = (*env)->GetFieldID(env, fuse_FuseStatfs->class, "blocksAvail", "J");
       if ((*env)->ExceptionCheck(env)) break;
-      fuse_FuseStatfs->field.blocksFree = (*env)->GetFieldID(env, fuse_FuseStatfs->class, "blocksFree", "I");
+      fuse_FuseStatfs->field.blocksFree = (*env)->GetFieldID(env, fuse_FuseStatfs->class, "blocksFree", "J");
       if ((*env)->ExceptionCheck(env)) break;
-      fuse_FuseStatfs->field.files = (*env)->GetFieldID(env, fuse_FuseStatfs->class, "files", "I");
+      fuse_FuseStatfs->field.files = (*env)->GetFieldID(env, fuse_FuseStatfs->class, "files", "J");
       if ((*env)->ExceptionCheck(env)) break;
-      fuse_FuseStatfs->field.filesFree = (*env)->GetFieldID(env, fuse_FuseStatfs->class, "filesFree", "I");
+      fuse_FuseStatfs->field.filesFree = (*env)->GetFieldID(env, fuse_FuseStatfs->class, "filesFree", "J");
       if ((*env)->ExceptionCheck(env)) break;
-      fuse_FuseStatfs->field.namelen = (*env)->GetFieldID(env, fuse_FuseStatfs->class, "namelen", "I");
+      fuse_FuseStatfs->field.namelen = (*env)->GetFieldID(env, fuse_FuseStatfs->class, "namelen", "J");
       if ((*env)->ExceptionCheck(env)) break;
 
       // obtain constructor method IDs
@@ -368,7 +368,7 @@ jclass_fuse_FuseStatfs *alloc_jclass_fuse_FuseStatfs(JNIEnv *env)
       if ((*env)->ExceptionCheck(env)) break;
       fuse_FuseStatfs->method.notifyAll = (*env)->GetMethodID(env, fuse_FuseStatfs->class, "notifyAll", "()V");
       if ((*env)->ExceptionCheck(env)) break;
-      fuse_FuseStatfs->method.set__IIIIIII = (*env)->GetMethodID(env, fuse_FuseStatfs->class, "set", "(IIIIIII)V");
+      fuse_FuseStatfs->method.set__JJJJJJJ = (*env)->GetMethodID(env, fuse_FuseStatfs->class, "set", "(JJJJJJJ)V");
       if ((*env)->ExceptionCheck(env)) break;
       fuse_FuseStatfs->method.toString = (*env)->GetMethodID(env, fuse_FuseStatfs->class, "toString", "()Ljava/lang/String;");
       if ((*env)->ExceptionCheck(env)) break;

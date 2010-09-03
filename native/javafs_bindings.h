@@ -216,7 +216,7 @@ typedef struct _jclass_fuse_FuseStatfs
       jmethodID hashCode;
       jmethodID notify;
       jmethodID notifyAll;
-      jmethodID set__IIIIIII;
+      jmethodID set__JJJJJJJ;
       jmethodID toString;
       jmethodID wait;
       jmethodID wait__J;

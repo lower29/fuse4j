@@ -14,24 +14,24 @@ import fuse.util.Struct;
 
 public class FuseStatfs extends Struct implements FuseStatfsSetter
 {
-   public int blockSize;
-   public int blocks;
-   public int blocksFree;
-   public int blocksAvail = -1; // by default (if not overwriten) it is computed as: blocksFree * 20 / 19
-   public int files;
-   public int filesFree;
-   public int namelen;
+   public long blockSize;
+   public long blocks;
+   public long blocksFree;
+   public long blocksAvail = -1; // by default (if not overwriten) it is computed as: blocksFree * 20 / 19
+   public long files;
+   public long filesFree;
+   public long namelen;
 
 
    /**
     * FuseStatfsSetter implementation
     */
-   public void set(int blockSize, int blocks, int blocksFree, int blocksAvail, int files, int filesFree, int namelen)
+   public void set(long blockSize, long blocks, long blocksFree, long blocksAvail, long files, long filesFree, long namelen)
    {
       this.blockSize = blockSize;
       this.blocks = blocks;
       this.blocksFree = blocksFree;
-      this.blocksAvail = (blocksAvail >= 0)? blocksAvail : (int)((long)blocksFree * 20L / 19L);
+      this.blocksAvail = (blocksAvail >= 0)? blocksAvail : blocksFree * 20L / 19L;
       this.files = files;
       this.filesFree = filesFree;
       this.namelen = namelen;

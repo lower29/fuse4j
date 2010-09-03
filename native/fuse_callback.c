@@ -618,13 +618,13 @@ static int javafs_statvfs(const char *path, struct statvfs *fst)
       jerrno = (*env)->CallIntMethod(env, fuseFS, FuseFS->method.statfs__Lfuse_FuseStatfsSetter_, jStatfs);
       if (exception_check_jerrno(env, &jerrno)) break;
 
-      fst->f_bsize   = (long) (*env)->GetIntField(env, jStatfs, FuseStatfs->field.blockSize);
-      fst->f_blocks  = (long) (*env)->GetIntField(env, jStatfs, FuseStatfs->field.blocks);
-      fst->f_bfree   = (long) (*env)->GetIntField(env, jStatfs, FuseStatfs->field.blocksFree);
-      fst->f_bavail  = (long) (*env)->GetIntField(env, jStatfs, FuseStatfs->field.blocksAvail);
-      fst->f_files   = (long) (*env)->GetIntField(env, jStatfs, FuseStatfs->field.files);
-      fst->f_ffree   = (long) (*env)->GetIntField(env, jStatfs, FuseStatfs->field.filesFree);
-      fst->f_namemax = (long) (*env)->GetIntField(env, jStatfs, FuseStatfs->field.namelen);
+      fst->f_bsize   = (long) (*env)->GetLongField(env, jStatfs, FuseStatfs->field.blockSize);
+      fst->f_blocks  = (long) (*env)->GetLongField(env, jStatfs, FuseStatfs->field.blocks);
+      fst->f_bfree   = (long) (*env)->GetLongField(env, jStatfs, FuseStatfs->field.blocksFree);
+      fst->f_bavail  = (long) (*env)->GetLongField(env, jStatfs, FuseStatfs->field.blocksAvail);
+      fst->f_files   = (long) (*env)->GetLongField(env, jStatfs, FuseStatfs->field.files);
+      fst->f_ffree   = (long) (*env)->GetLongField(env, jStatfs, FuseStatfs->field.filesFree);
+      fst->f_namemax = (long) (*env)->GetLongField(env, jStatfs, FuseStatfs->field.namelen);
       break;
    }
 

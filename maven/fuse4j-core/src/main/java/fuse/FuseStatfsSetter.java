@@ -7,5 +7,5 @@ package fuse;
  */
 public interface FuseStatfsSetter
 {
-   public void set(int blockSize, int blocks, int blocksFree, int blocksAvail, int files, int filesFree, int namelen);
+   public void set(long blockSize, long blocks, long blocksFree, long blocksAvail, long files, long filesFree, long namelen);
 }
